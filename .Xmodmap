@@ -1,0 +1,26 @@
+!-- xmodmap ~/.Xmodmap --!
+! Caps_Lock -> Mode_switch
+clear  lock
+add    mod5 = Caps_Lock
+keycode  66 = Mode_switch
+ 
+! Caps_Lock + u     -> BackSpace
+keycode  30 = u U BackSpace
+ 
+! Caps_Lock + p     -> Next
+keycode  33 = p P Next
+
+! Caps_Lock + h     -> Left
+keycode  43 = h H Left
+ 
+! Caps_Lock + j     -> Down
+keycode  44 = j J Down
+ 
+! Caps_Lock + k     -> Up
+keycode  45 = k K Up
+ 
+! Caps_Lock + l     -> Right
+keycode  46 = l L Right
+
+keycode  13 = 4 dollar End
+keycode  15 = 6 asciicircum Home
