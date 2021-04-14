@@ -212,3 +212,4 @@ exec_always fcitx5
 
 # if sleep 1 s , exec_always sleep 1; xmodmap ~/.Xmodmap
 exec_always sleep 0.5; xmodmap ~/.Xmodmap
+
