@@ -93,7 +93,9 @@ if use_neovim
 	set tabstop=4
 	set softtabstop=4
 	set shiftwidth=4
+	" number + relativenumber 显示相对行号 + 绝对行号
 	set number
+	set relativenumber
 	set cursorcolumn
 	set cursorline
 	syntax on
