@@ -39,6 +39,8 @@ if !filereadable(vim_plug_path)
         silent !curl -fLo ~/.config/vscodeVim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     endif
     let vim_plug_just_installed = 1
+else 
+    let vim_plug_just_installed = 1
 endif
 
 " manually load vim-plug the first time
@@ -67,6 +69,7 @@ if use_neovim
 	Plug 'mg979/vim-visual-multi'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdtree'
+	Plug 'lambdalisue/suda.vim'
 else
 	Plug 'asvetliakov/'
 endif
