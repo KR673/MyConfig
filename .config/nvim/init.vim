@@ -76,6 +76,8 @@ endif
 
 if iswindows
     Plug 'lyokha/vim-xkbswitch', {'as': 'xkbswitch'}
+else
+	Plug 'lilydjwg/fcitx.vim'
 endif
 
 Plug 'tpope/vim-surround'

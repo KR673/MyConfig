@@ -1,0 +1,29 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Mon Aug 19 23:34:15 2019"
+  rime_version: 1.5.3
+patch:
+  "ascii_composer/good_old_caps_lock": true
+  "ascii_composer/switch_key":
+    Caps_Lock: commit_code
+    Control_L: commit_code
+    Control_R: commit_code
+    Shift_L: noop
+    Shift_R: noop
+  enable_sentence: false
+  horizontal: true
+  inline_preedit: true
+  "key_binder/bindings":
+    - {accept: Return, send: commit_raw_input, when: composing}
+    - {accept: semicolon, send: 2, when: has_menu}
+    - {accept: apostrophe, send: 3, when: has_menu}
+    - {accept: comma, send: Page_Up, when: paging}
+    - {accept: period, send: Page_Down, when: has_menu}
+  "menu/page_size": 3
+  schema_list:
+    - {schema: wubi86}
+  "switches/@0/reset": 1
+  "switcher/hotkeys":
+    - F4
