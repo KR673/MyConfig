@@ -23,7 +23,7 @@ patch:
     - {accept: period, send: Page_Down, when: has_menu}
   "menu/page_size": 3
   schema_list:
-    - {schema: wubi86}
+    - {schema: wubi_pinyin}
   "switches/@0/reset": 1
   "switcher/hotkeys":
     - F4

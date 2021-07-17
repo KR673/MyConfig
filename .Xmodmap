@@ -1,10 +1,19 @@
 !-- xmodmap ~/.Xmodmap --!
 ! Caps_Lock -> Mode_switch
+! 具体配置可以参考：https://wiki.archlinux.org/title/xmodmap#Introduction，　因为键盘自带有　caps　和　ctrl　皱键切换，所有暂时先不研究了，只记录一下必要的信息
+! 等号右侧被称为keysym, 每一个字段指定左侧与modifer键组合时的功能，一共有6种，如下
+! Key
+! Shift+Key
+! Mode_switch+Key
+! Mode_switch+Shift+Key
+! ISO_Level3_Shift+Key
+! ISO_Level3_Shift+Shift+Key
+
 clear  lock
 add    mod5 = Caps_Lock
 keycode  66 = Mode_switch
  
-! Caps_Lock + u     -> BackSpace
+! Mode_switch + keycode=30 -> BackSpace
 keycode  30 = u U BackSpace
  
 ! Caps_Lock + p     -> Next
