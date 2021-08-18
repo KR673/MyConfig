@@ -11,7 +11,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${env:MONITOR:HDMI-A-1}
 width = 100%
 height = 25
 ;offset-x = 1%
@@ -45,7 +45,8 @@ font-4 = "material icons:pixelsize=16;3"
 modules-left = i3
 ;modules-center = mpd
 modules-center =
-modules-right = alsa filesystem memory cpu temperature wlan eth date
+;modules-right = alsa filesystem memory cpu temperature wlan eth date
+modules-right = alsa filesystem memory cpu temperature eth date
 
 tray-position = right
 tray-padding = 2
