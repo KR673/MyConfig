@@ -126,7 +126,8 @@ set $ws2 2:
 set $ws3 3:
 set $ws4 4:
 set $ws5 5:Anki
-set $ws6 6:
+set $ws6 6:Note
+# set $ws6 6:
 # set $ws7 7:
 # set $ws8 8:
 # set $ws9 9:
@@ -189,8 +190,10 @@ mode "resize" {
 }
 
 assign [class="Anki"] $ws5
-#assign [class="Anki"] $tag5
-#assign [class="Anki"] $ws5
+assign [class="WizNote"] $ws6
+assign [class="google-chrome"] $ws3
+assign [class="code"] $ws2
+assign [class="jetbrains-idea-ce"] $ws2
 #for_window [class="anki"] move to workspace $ws5 
 
 bindsym $mod+r mode "resize"
@@ -202,9 +205,9 @@ bindsym $mod+r mode "resize"
 #}
 
 # exec xset dpms 0 0 3600
-# exec_always xset dpms 0 0 3600
-exec_always xset s 3600
-exec xset s 3600
+# exec xset s 3600
+exec_always sleep 10; xset dpms 0 0 3600
+exec_always sleep 10; xset s 3600
 
 gaps inner 8
 new_window pixel 0
@@ -220,8 +223,9 @@ exec_always picom --experimental-backends -b
 
 exec_always fcitx5
 
-exec_always anki
+exec_always sleep 15; anki
+exec_always WizNote
 
 # if sleep 1 s , exec_always sleep 1; xmodmap ~/.Xmodmap
 exec_always sleep 0.5; xmodmap ~/.Xmodmap
-
+exec_always sleep 5; barrier
