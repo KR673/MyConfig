@@ -110,23 +110,23 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-# set $ws1 "1"
-# set $ws2 "2"
-# set $ws3 "3"
-# set $ws4 "4"
-# set $ws5 "5"
-# set $ws6 "6"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:Anki
-set $ws6 6:Note
+# set $ws1 1:
+# set $ws2 2:
+# set $ws3 3:
+# set $ws4 4:
+# set $ws5 5:Anki
+# set $ws6 6:Note
 # set $ws6 6:
 # set $ws7 7:
 # set $ws8 8:
@@ -209,22 +209,22 @@ bindsym $mod+r mode "resize"
 exec_always sleep 10; xset dpms 0 0 3600
 exec_always sleep 10; xset s 3600
 
-gaps inner 8
+gaps inner 3
 new_window pixel 0
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # feh , change wallpapers
-exec_always --no-startup-id feh --bg-scale "/home/wangxiaobo/Pictures/wallpapers/stony-cat.png"
+exec_always --no-startup-id feh --bg-scale "/home/wangxiaobo/Pictures/wallpapers/201532.jpg"
 
 # picom , make terminal capacity
 exec_always picom --experimental-backends -b
 
 exec_always fcitx5
 
-exec_always sleep 15; anki
-exec_always WizNote
+# exec_always sleep 15; anki
+# exec_always WizNote
 
 # if sleep 1 s , exec_always sleep 1; xmodmap ~/.Xmodmap
 exec_always sleep 0.5; xmodmap ~/.Xmodmap

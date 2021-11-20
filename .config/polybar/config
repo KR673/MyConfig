@@ -13,10 +13,10 @@ alert = #bd2c40
 [bar/example]
 monitor = ${env:MONITOR:HDMI-A-1}
 width = 100%
-height = 25
+height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
@@ -26,8 +26,8 @@ line-size = 3
 line-color = #f00
 
 border-top-size = 0
-border-left-size = 8
-border-right-size = 8
+border-left-size = 0
+border-right-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -43,10 +43,8 @@ font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;1"
 font-4 = "material icons:pixelsize=16;3"
 
 modules-left = i3
-;modules-center = mpd
-modules-center =
-;modules-right = alsa filesystem memory cpu temperature wlan eth date
-modules-right = alsa filesystem memory cpu temperature eth date
+modules-center = date
+modules-right = alsa filesystem memory cpu temperature eth 
 
 tray-position = right
 tray-padding = 2
@@ -201,6 +199,8 @@ label = %gb_used%
 
 [module/wlan]
 type = internal/network
+
+;连接的网卡, ip addr 可以查看
 interface = wlp2s0
 interval = 3.0
 
@@ -225,14 +225,13 @@ animation-packetloss-0-foreground = #ffa64c
 
 [module/eth]
 type = internal/network
-interface = enp8s0
+interface = wlp6s0
 interval = 3.0
 
 ;format-connected-underline = #55aa55
-format-connected-prefix = "📶"
+;format-connected-prefix = "📶"
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %downspeed%/%upspeed%
-
+label-connected = %local_ip%    %downspeed%    %upspeed%
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -243,17 +242,19 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
-;date-alt = " %Y-%m-%d"
+; date-alt: 点击显示的时间, date: 默认显示的时间
+; %A:周, %B:月份(英文)
+date-alt = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+date = %%{F#fff}%A, %Y-%m-%d  %%{F#fff}%H:%M%%{F#666}:%%{F#999}%S%%{F-}
+;date = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
-time = %H:%M
+;time = %H:%M
 ;time-alt = %H:%M:%S
 
-format-prefix = 
+;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
-
-label = %date% %time%
+;label = %date% %time%
 
 
 [module/alsa]
