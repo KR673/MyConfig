@@ -245,7 +245,7 @@ interval = 5
 ; date-alt: 点击显示的时间, date: 默认显示的时间
 ; %A:周, %B:月份(英文)
 date-alt = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
-date = %%{F#fff}%A, %Y-%m-%d  %%{F#fff}%H:%M%%{F#666}:%%{F#999}%S%%{F-}
+date = %%{F#fff}%A, %Y-%m-%d  %%{F#fba922}%H:%M%%{F#999}:%%{F#999}%S%%{F-}
 ;date = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 ;time = %H:%M
