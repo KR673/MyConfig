@@ -189,12 +189,12 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-assign [class="Anki"] $ws5
-assign [class="WizNote"] $ws6
-assign [class="google-chrome"] $ws3
-assign [class="code"] $ws2
-assign [class="jetbrains-idea-ce"] $ws2
-#for_window [class="anki"] move to workspace $ws5 
+# assign [class="Anki"] $ws5
+# assign [class="WizNote"] $ws6
+# assign [class="google-chrome"] $ws3
+# assign [class="code"] $ws2
+# assign [class="jetbrains-idea-ce"] $ws2
+#f or_window [class="anki"] move to workspace $ws5 
 
 bindsym $mod+r mode "resize"
 

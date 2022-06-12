@@ -226,6 +226,7 @@ animation-packetloss-0-foreground = #ffa64c
 [module/eth]
 type = internal/network
 interface = wlp6s0
+;interface = enp8s0
 interval = 3.0
 
 ;format-connected-underline = #55aa55
@@ -258,32 +259,7 @@ date = %%{F#fff}%A, %Y-%m-%d  %%{F#fba922}%H:%M%%{F#999}:%%{F#999}%S%%{F-}
 
 
 [module/alsa]
-type = internal/volume
-
-format-volume = <label-volume> <bar-volume>
-label-volume = 
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+type = internal/alsa
 
 [module/battery]
 type = internal/battery
