@@ -8,8 +8,10 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod1
+
+# 隐藏窗口顶部的title bar
+for_window [ALL] border pixel 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -214,18 +216,21 @@ new_window pixel 0
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# feh , change wallpapers
-exec_always --no-startup-id feh --bg-scale "/home/wangxiaobo/Pictures/wallpapers/201532.jpg"
-
 # picom , make terminal capacity
 exec_always picom --experimental-backends -b
-
+# feh , change wallpapers
+exec_always --no-startup-id feh --bg-scale "/home/wangxiaobo/Pictures/wallpapers/54700.jpg"
 exec_always fcitx5
+# if sleep 1 s , exec_always sleep 1; xmodmap ~/.Xmodmap
+exec_always sleep 5; xmodmap ~/.Xmodmap
 
 # exec_always sleep 15; anki
 # exec_always WizNote
 
-# if sleep 1 s , exec_always sleep 1; xmodmap ~/.Xmodmap
-exec_always sleep 0.5; xmodmap ~/.Xmodmap
-exec_always sleep 5; barrier
+
+# 使用 exec 不会在restart i3时启动
+exec sleep 5; barrier
+exec sleep 5; flameshot
+exec sleep 5; blueman-applet
+exec sleep 5; imwheel
+# exec sleep 5; /opt/Clash\ for\ Windows-0.19.25-x64-linux/cfw > /dev/null 2>&1 &

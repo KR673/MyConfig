@@ -12,7 +12,7 @@
 clear lock
 clear control
 add control = Caps_Lock Control_L Control_R
-keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+keycode 66 = Control_L NoSymbol NoSymbol Caps_Lock
 keycode 37 = Mode_switch
 
 ! 键盘如果自带 control 和 capsLock 切换可以使用这个配置
